@@ -61,6 +61,28 @@ public class LinkedList{
         }
     }
 
+    public void insert(String data, String dataBefore){
+        Node node = new Node(data);
+        Node temp = head;
+        if(this.head == null){
+            this.head = this.tail = node;
+        }
+        else{
+            // Find the node after which the data has to be inserted
+            Node nodeBefore = this.find(dataBefore);
+            if (nodeBefore != null) {
+                // Insert the new node after nodeBefore
+                node.setNext(nodeBefore.getNext());
+                nodeBefore.setNext(node);
+                // If nodeBefore is currently the tail node,
+                // make the new node as the tail node
+                if (nodeBefore == this.tail)
+                    this.tail = node;
+            } else
+                System.out.println("Node not found");
+        }
+    }
+
     public void display(){
         Node temp = head;
         while(temp != null){
