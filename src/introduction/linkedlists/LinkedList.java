@@ -1,6 +1,7 @@
 package introduction.linkedlists;
 
 class Node {
+
     private String data;
     private Node next;
 
@@ -26,6 +27,7 @@ class Node {
 }
 
 public class LinkedList{
+
     private Node head;
     private Node tail;
 
@@ -49,7 +51,6 @@ public class LinkedList{
         }
     }
 
-
     public void addAtEnd(String data){
         Node node = new Node(data);
 
@@ -61,6 +62,9 @@ public class LinkedList{
         }
     }
 
+    /**
+     *This method inserts the new node after the specfied node
+     */
     public void insert(String data, String dataBefore){
         Node node = new Node(data);
         Node temp = head;
@@ -102,4 +106,5 @@ public class LinkedList{
         }
         return null;
     }
+
 }

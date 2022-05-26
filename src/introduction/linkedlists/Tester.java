@@ -10,5 +10,8 @@ public class Tester {
         list.display();
         list.addAtBeginning("D");
         list.display();
+        System.out.println(list.find("S"));
+        list.insert("S","R");
+        list.display();
     }
 }
