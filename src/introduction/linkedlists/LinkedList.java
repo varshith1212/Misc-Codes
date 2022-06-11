@@ -63,7 +63,7 @@ public class LinkedList{
     }
 
     /**
-     *This method inserts the new node after the specfied node
+     *This method inserts the new node after the specified node
      */
     public void insert(String data, String dataBefore){
         Node node = new Node(data);
